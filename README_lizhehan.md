@@ -121,3 +121,7 @@ python train.py --weights false --cfg model/yolov5s.yaml
 ```
 python train.py --img 320
 ```
+
+## 激活函数的替换
++ 在model/common.py中替换掉卷积的激活函数，可以用relu、Lrelu、hardswish等等
++ 如果不是torch内置的激活函数，可以将定义添加到common.py中，或者添加到utils/activations.py中调用
