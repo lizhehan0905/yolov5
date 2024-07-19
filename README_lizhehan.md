@@ -115,13 +115,13 @@ python train.py --weigths yolov5s.pt
 ```
 python train.py --weights false --cfg model/yolov5s.yaml
 ```
-
 ## 训练尺度
 + 默认640，可以按照实际需求设置，例如512、480、320，也可以按照论文推荐的640-1280-640的方式来训练，提高训练效果
 ```
 python train.py --img 320
 ```
-
 ## 激活函数的替换
 + 在model/common.py中替换掉卷积的激活函数，可以用relu、Lrelu、hardswish等等
 + 如果不是torch内置的激活函数，可以将定义添加到common.py中，或者添加到utils/activations.py中调用
+## 宽度高度的调整
++ 在models文件夹中添加自己的yaml文件，更改类别数，更改宽度系数和高度系数，可以快速调整整个模型的卷积堆叠个数和filter个数
