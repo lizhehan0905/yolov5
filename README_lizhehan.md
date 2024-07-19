@@ -115,3 +115,9 @@ python train.py --weigths yolov5s.pt
 ```
 python train.py --weights false --cfg model/yolov5s.yaml
 ```
+
+## 训练尺度
++ 默认640，可以按照实际需求设置，例如512、480、320，也可以按照论文推荐的640-1280-640的方式来训练，提高训练效果
+```
+python train.py --img 320
+```
