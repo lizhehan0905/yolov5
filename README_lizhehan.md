@@ -104,3 +104,14 @@ pip install -r requirements.txt -i  https://pypi.tuna.tsinghua.edu.cn/simple
 + triton.py
 ## classify分类的调用代码
 ## segment分割的调用代码
+
+# 改进方法
+## 训练方式
++ 迁移学习：数据集<10w张，建议从官方权重开始迁移学习
+```
+python train.py --weigths yolov5s.pt
+```
++ 从零训练:数据量大，建议从零训练，epoch可以适当多设置一些
+```
+python train.py --weights false --cfg model/yolov5s.yaml
+```
